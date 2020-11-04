@@ -70,7 +70,7 @@ class ComicControoller extends Controller
     {
         $comic = Comic::find($id); 
         
-        return view("comics.show", ["comic" => $comic]);
+        return view("show", ["comic" => $comic]);
     }
 
     /**
@@ -81,7 +81,9 @@ class ComicControoller extends Controller
      */
     public function edit($id)
     {
-        
+        $comic = Comic::find($id);
+
+        return view("edit", ["comic" => $comic]);
     }
 
     /**
