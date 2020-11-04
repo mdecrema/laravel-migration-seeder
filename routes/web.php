@@ -17,4 +17,4 @@ use Illuminate\Support\Facades\Route;
    return view('welcome');
 });*/
 
-Route::resource('comics', 'ComicController');
+Route::resource('comics', 'ComicControoller');
