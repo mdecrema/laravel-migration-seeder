@@ -17,12 +17,12 @@ class ComicsTableSeeder extends Seeder
 
             $newComic=new Comic;
             
-            $newComic->title=$faker->word;        
-            $newComic->original_title=$faker->word;
-            $newComic->author=$faker->name;
-            $newComic->image=$faker->imageUrl;
-            $newComic->year=$faker->year;
-            $newComic->amount=$faker->randomFloat;
+            $newComic->title=$faker->word();        
+            $newComic->original_title=$faker->word();
+            $newComic->author=$faker->firstname();
+            $newComic->image=$faker->word();
+            $newComic->release=$faker->year('2000');
+            $newComic->amount=$faker->randomFloat(3, 0, 999);
 
             $newComic->save();
         }
